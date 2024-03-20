@@ -1,0 +1,47 @@
+#+TITLE: UMass Lowell - Contribute to DPDK Presentation
+#+AUTHOR: Aaron Conole <aconole@redhat.com>
+#+DATE: March 20, 2024
+#+DESCRIPTION: 
+#+KEYWORDS: 
+#+LANGUAGE:  en
+#+OPTIONS:   H:1 num:nil ^:{} toc:nil email:nil
+#+LaTeX_CLASS_OPTIONS: [presentation]
+#+BEAMER_HEADER: \usepackage{beamerthemeRedHat}
+#+BIND: org-latex-title-command "\\begin{rhbg}\\maketitle\\end{rhbg}"
+#+BEAMER_HEADER: \usepackage[utf8]{inputenc}
+#+BEAMER_HEADER: \usepackage{setspace,amsfonts,calc,upquote,hyperref,graphicx}
+#+BEAMER_HEADER: \usepackage{colortbl}
+#+BEAMER_HEADER: \usepackage{tikz}
+#+BEAMER_HEADER: \usepackage{pgfplots}
+#+BEAMER_HEADER: \beamertemplatenavigationsymbolsempty
+#+EXCLUDE_TAGS: noexport
+#+PROPERTY:  header-args :eval no
+
+* Agenda
+- Introduce you to =git=
+- Introduce you to =codespell=
+- Show you how engineers in Open Source cooperate
+- Get your name into the *DPDK Project*
+* What is Git
+- Software version control
+ - Keeps track of changes
+- Need it so we can tell why things changed and how
+- Patches and emails
+- Used to track kernel and other projects
+* What is codespell
+- Spell checker for code files
+- Detects common misspellings based on a simple dictionary
+* How do changes make their way to developers
+- Make a change
+- Make a patch
+- Share the patch with others
+- People like it and it gets merged, everyone uses it
+* How to get your name into DPDK Project
+- Codespell on the code base
+- Identify a misspelled word
+- Correct the spelling
+- Make a patch
+- Submit it
+* Set up email and send patch
+- =git send-email= is the preferred method
+- Works with gmail, etc.
