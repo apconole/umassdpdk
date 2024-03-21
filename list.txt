@@ -1,0 +1,12 @@
+
+
+./app/test/test_cfgfile.c:171: failured ==> failed
+./app/test/test_cfgfile.c:188: failured ==> failed
+./app/test/test_cfgfile.c:199: failured ==> failed
+./app/test/test_cfgfile.c:239: failured ==> failed
+./app/test/test_power.c:146: unsucceeded ==> unsuccessful
+./buildtools/pkg-config/meson.build:25: occurences ==> occurrences
+./doc/guides/nics/mlx5.rst:2011: descritors ==> descriptors
+./doc/guides/prog_guide/packet_framework.rst:512: preformed ==> performed
+./doc/guides/prog_guide/profile_app.rst:62: derails ==> details
+./examples/ipsec-secgw/parser.c:391: numer ==> number

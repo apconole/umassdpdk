@@ -22,6 +22,9 @@
 - Introduce you to =codespell=
 - Show you how engineers in Open Source cooperate
 - Get your name into the *DPDK Project*
+* Also Good
+- Slides are always available at https://github.com/apconole/umassdpdk.git
+- Written in org-mode so you can make changes.
 * What is Git
 - Software version control
  - Keeps track of changes
@@ -45,3 +48,55 @@
 * Set up email and send patch
 - =git send-email= is the preferred method
 - Works with gmail, etc.
+- Simple setup in ~/.gitconfig
+#+BEGIN_SRC conf
+  [user]
+          name = Foonly Foobar
+          email = foo@gmail.com
+  [sendemail]
+          smtpserver = smtp.gmail.com
+          suppresscc = all
+          chainreplyto = false
+          smtpuser = foo@gmail.com
+          smtpserverport = 587
+          smtpencryption = tls
+          smtppass = $password$
+#+END_SRC
+* Quick script to setup
+- A quick setup without needing an editor
+#+BEGIN_SRC sh
+  $ git config user.name "My Name"
+  $ git config user.email emailaddr@gmail.com
+  $ git config sendemail.smtpserver smtp.gmail.com
+  $ git config sendemail.smtpuser emailaddr@gmail.com
+  $ git config sendemail.smtppass PASSWORD_SENSITIVE
+  $ git config sendemail.smtpserverport 587
+  $ git config sendemail.smtpencryption tls
+#+END_SRC
+- Configuration on gmail side
+ - May require some security tweak to allow password auth
+* Fixing a mistake
+** The procedure
+1. Pick a spelling mistake (see http://github.com/apconole/umassdpdk.git/blob/main/list.txt)
+2. Fix it with an editor (vim / emacs / etc.)
+   Save it.
+3. =git add path/to/file=
+4. =git commit= with the correct template
+5. =git format-patch HEAD~=
+6. Send the patch::
+   git send-email --to "dev@dpdk.org" --cc "aconole@redhat.com" 0001-....patch
+* Simple - you'll see lots of emails
+- Robots will test the patch
+- People will review it for correctness
+- Someone will ACK/Reviewed-by on it
+* Commit template
+** Proper template
+#+BEGIN_SRC
+git commit -m "spelling: Fix mistaken use of $BAD with $GOOD
+
+Codespell alerted to a spelling mistake in $FILE with $WORD.
+Manual review confirms this is incorrect spelling, so fix it.
+
+Signed-off-by: NAME <email>
+"
+#+END_SRC
