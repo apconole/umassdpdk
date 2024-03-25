@@ -25,6 +25,8 @@
 * Also Good
 - Slides are always available at https://github.com/apconole/umassdpdk.git
 - Written in org-mode so you can make changes.
+- For additional details on the DPDK development process, see:
+  https://medium.com/@skewcy/first-patch-submission-to-the-dpdk-open-source-project-2fa49196c384
 * What is Git
 - Software version control
  - Keeps track of changes
